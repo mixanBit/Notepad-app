@@ -92,9 +92,17 @@
   background-color: var(--headerColor);
   padding-left: 21px;
   padding-right: 21px;
+  transition: .25s;
     @media screen and (max-width: 600px) {
       display: none;
     }
+    &:hover{
+      background-color: #42275A;
+    }
+}
+
+.settings_entrance{
+  width: 20px;
 }
 
 .settings_login{
