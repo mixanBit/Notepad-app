@@ -1,0 +1,16 @@
+:root{
+  /* header.scss */
+  --heightHeaderContainer: 70px;
+  --headerBg: linear-gradient(45deg, #42275A, #734B6D);
+  --headerColor: white;
+  --headerSettingsLoginColor: #3D4043;
+
+  /* body.scss */
+  --notesHeadingColor: #3D4043;
+  --createNotesBg: #42275A;
+  --createNotesDopColor: #734B6D;
+
+  /* noteitems.scss */
+  --btnItemBg: white;
+  --nameItemColor: white;
+}

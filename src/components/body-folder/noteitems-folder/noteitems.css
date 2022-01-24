@@ -1,0 +1,223 @@
+@charset "UTF-8";
+.note_items_container {
+  height: calc(100vh - 320px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 2px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  .note_items_container {
+    height: calc(100vh - 285px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .note_items_container {
+    height: calc(100vh - 275px);
+  }
+}
+
+.note_item {
+  cursor: pointer;
+  width: 100%;
+  min-height: 84px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--createNotesDopColor);
+  padding-left: 26px;
+  padding-right: 26px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+@media screen and (max-width: 768px) {
+  .note_item {
+    min-height: 70px;
+    padding-left: 15px;
+  }
+}
+.note_item:hover {
+  background-color: rgba(115, 75, 109, 0.8);
+}
+@media (hover: none) and (pointer: coarse) {
+  .note_item:hover {
+    background-color: var(--createNotesDopColor);
+  }
+}
+
+.note_item_anim {
+  -webkit-animation: itemInim1 0.4s;
+          animation: itemInim1 0.4s;
+}
+@media screen and (max-width: 768px) {
+  .note_item_anim {
+    -webkit-animation: itemInim2 0.4s;
+            animation: itemInim2 0.4s;
+  }
+}
+
+@-webkit-keyframes itemInim1 {
+  0% {
+    opacity: 0;
+    margin-top: -84px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+@keyframes itemInim1 {
+  0% {
+    opacity: 0;
+    margin-top: -84px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+@-webkit-keyframes itemInim2 {
+  0% {
+    opacity: 0;
+    margin-top: -70px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+@keyframes itemInim2 {
+  0% {
+    opacity: 0;
+    margin-top: -70px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+.note_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 22px;
+}
+
+.btn_item {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.btn_item + label {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.btn_item + label::before {
+  content: "";
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  background-color: var(--btnItemBg);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/* стили при наведении курсора на checkbox */
+/* стили для активного чекбокса (при нажатии на него) */
+/* стили для чекбокса, находящегося в фокусе */
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+/* стили для чекбокса, находящегося в состоянии checked */
+.btn_item:checked + label::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(#42275A), to(#734B6D));
+  background: linear-gradient(180deg, #42275A, #734B6D);
+  background-image: url("../../../../public/images/check.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-animation: btn_item 0.3s;
+          animation: btn_item 0.3s;
+}
+
+@-webkit-keyframes btn_item {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes btn_item {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.name_item {
+  width: calc(100vw - 160px);
+  word-wrap: break-word;
+  color: var(--nameItemColor);
+  font-size: 18px;
+  font-weight: normal;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .name_item {
+    width: calc(100vw - 120px);
+  }
+}
+
+.name_item_active {
+  -webkit-text-decoration: line-through solid 2px;
+          text-decoration: line-through solid 2px;
+  opacity: 0.7;
+}

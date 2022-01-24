@@ -1,0 +1,35 @@
+::-webkit-scrollbar-button {
+  background-image:url('');
+  background-repeat:no-repeat;
+  width:5px;
+  height:0px;
+  }
+  
+  ::-webkit-scrollbar-track {
+  background-color:#734B6D;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  /* -webkit-border-radius: 50px;
+  border-radius: 50px; */
+  background-color: #42275A;
+
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+  background-color: #42275A;
+
+  }
+  
+  ::-webkit-resizer{
+  background-image:url('');
+  background-repeat:no-repeat;
+  width:4px;
+  height:0px
+  }
+  
+  ::-webkit-scrollbar{
+  width: 6px;
+  height: 3px;
+  }
+  
