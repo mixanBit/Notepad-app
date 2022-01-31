@@ -4,34 +4,34 @@ import './noteitems-folder/noteitems.css'
 
 import NoteItems from './noteitems-folder/noteitems'
 
-let array = require('./array.json')
+// let array = require('./array.json')
 
-// let array = [
-//   {
-//     name: 'Заметка 1',
-//     classItem: 'name_item',
-//     idClass: "color-1",
-//     id: 1,
-//     animation: 'note_item',
-//     checked: false
-//   },
-//   {
-//     name: 'Заметка 2',
-//     classItem: 'name_item',
-//     idClass: "color-2",
-//     id: 2,
-//     animation: 'note_item',
-//     checked: false
-//   },
-//   {
-//     name: 'Заметка 3',
-//     classItem: 'name_item',
-//     idClass: "color-3",
-//     id: 3,
-//     animation: 'note_item',
-//     checked: false
-//   }
-// ]
+let array = [
+  {
+    name: 'Заметка 1',
+    classItem: 'name_item',
+    idClass: "color-1",
+    id: 1,
+    animation: 'note_item',
+    checked: false
+  },
+  {
+    name: 'Заметка 2',
+    classItem: 'name_item',
+    idClass: "color-2",
+    id: 2,
+    animation: 'note_item',
+    checked: false
+  },
+  {
+    name: 'Заметка 3',
+    classItem: 'name_item',
+    idClass: "color-3",
+    id: 3,
+    animation: 'note_item',
+    checked: false
+  }
+]
 
 
 export class body extends React.Component {
@@ -49,8 +49,10 @@ export class body extends React.Component {
     this.createItem = this.createItem.bind(this)
   }
 
-  zeroFunction() {this.setState({zeroDate: 'Пустой клочёк данных'})
-console.log(array);}
+  zeroFunction() {
+    this.setState({zeroDate: 'Пустой клочёк данных'})
+    console.log(array);
+  }
 
   fromInput(event) {this.setState({inputData: event.target.value})}
 
