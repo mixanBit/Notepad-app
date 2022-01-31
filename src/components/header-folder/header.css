@@ -111,7 +111,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-gap: 5px;
+  grid-gap: 10px;
+  color: var(--headerSettingsLoginColor);
   background-color: var(--headerColor);
   padding-left: 21px;
   padding-right: 21px;
@@ -124,7 +125,11 @@
   }
 }
 .authorization:hover {
+  color: rgba(255, 255, 255, 0.9);
   background-color: #42275A;
+}
+.authorization .setting_logout {
+  font-size: 14px;
 }
 
 .settings_entrance {
