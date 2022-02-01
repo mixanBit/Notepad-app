@@ -6,11 +6,13 @@ import './color.css';
 import reportWebVitals from './reportWebVitals';
 
 // components
+import Authorization from './components/authorization-folder/authorization'
 import Header from './components/header-folder/header'
 import Body from './components/body-folder/body'
 
 ReactDOM.render(
   <React.StrictMode>
+    <Authorization />
     <Header />
     <Body />
   </React.StrictMode>,

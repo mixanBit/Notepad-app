@@ -1,4 +1,7 @@
 :root{
+  /* authorization.scss */
+  --authorizationLoginColor: #3D4043;
+
   /* header.scss */
   --heightHeaderContainer: 70px;
   --headerBg: linear-gradient(45deg, #42275A, #734B6D);
