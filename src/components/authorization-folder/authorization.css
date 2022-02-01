@@ -5,7 +5,9 @@
   z-index: 2;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .authorization_overlay {
@@ -20,10 +22,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
+  background-color: var(--authorizationBg);
+}
+@media screen and (max-width: 768px) {
+  .authorization_overlay {
+    width: 100%;
+  }
 }
 
 .authorization_login {
+  border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 10px;
   cursor: pointer;
   display: -webkit-box;
@@ -37,7 +45,12 @@
           align-items: center;
   grid-gap: 15px;
   background-color: rgba(0, 0, 0, 0);
-  padding: 4px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 10px;
+}
+.authorization_login:hover {
+  border: 1px solid grey;
 }
 .authorization_login img {
   width: 40px;

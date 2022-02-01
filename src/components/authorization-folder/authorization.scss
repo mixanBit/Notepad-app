@@ -5,7 +5,9 @@
   z-index: 2;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,.5);
+  visibility: visible;
+  opacity: 1;
+  background-color: rgba(0,0,0,.7);
 }
 
 .authorization_overlay{
@@ -14,23 +16,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: var(--authorizationBg);
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
 }
 
 .authorization_login{
+  border: 1px solid rgba(0,0,0,0);
   border-radius: 10px;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   grid-gap: 15px;
   background-color: rgba(0,0,0,0);
-  box-shadow: 0 2px 4px rgba(0,0,0,.5);
-  padding: 4px;
+  transition: .2s;
+  padding: 10px;
+    &:hover{
+      border: 1px solid grey;
+    }
     img{
-      width: 60px;
+      width: 40px;
     }
     p{
       font-size: 18px;
-      color: #000;
+      color: var(--authorizationLoginColor);
     }
 }
