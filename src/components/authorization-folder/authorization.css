@@ -8,8 +8,34 @@
   visibility: visible;
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
+.authorization_window_passive {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  -webkit-animation: anim_window_passive 0.7s;
+          animation: anim_window_passive 0.7s;
+}
+
+@-webkit-keyframes anim_window_passive {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
+
+@keyframes anim_window_passive {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
 .authorization_overlay {
   width: 50%;
   height: 100vh;
@@ -33,7 +59,6 @@
 }
 
 .authorization_login {
-  border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 10px;
   cursor: pointer;
   display: -webkit-box;
@@ -46,20 +71,21 @@
       -ms-flex-align: center;
           align-items: center;
   grid-gap: 15px;
+  color: var(--authorizationLoginColor);
   background-color: rgba(0, 0, 0, 0);
   -webkit-transition: 0.2s;
   transition: 0.2s;
   padding: 10px;
 }
 .authorization_login:hover {
-  border: 1px solid grey;
+  -webkit-box-shadow: 0 18px 55px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 18px 55px rgba(0, 0, 0, 0.4);
 }
 .authorization_login img {
   width: 40px;
 }
 .authorization_login p {
   font-size: 18px;
-  color: var(--authorizationLoginColor);
 }
 
 @-webkit-keyframes anim_overlay {
