@@ -23,6 +23,8 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: var(--authorizationBg);
+  -webkit-animation: anim_overlay 0.7s;
+          animation: anim_overlay 0.7s;
 }
 @media screen and (max-width: 768px) {
   .authorization_overlay {
@@ -58,4 +60,22 @@
 .authorization_login p {
   font-size: 18px;
   color: var(--authorizationLoginColor);
+}
+
+@-webkit-keyframes anim_overlay {
+  0% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes anim_overlay {
+  0% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: 0;
+  }
 }

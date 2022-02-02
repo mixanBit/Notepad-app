@@ -13,7 +13,9 @@ let array = [
     idClass: "color-1",
     id: 1,
     animation: 'note_item',
-    checked: false
+    checked: false,
+    star: './images/star-off.svg',
+    starId: false
   },
   {
     name: 'Заметка 2',
@@ -21,7 +23,9 @@ let array = [
     idClass: "color-2",
     id: 2,
     animation: 'note_item',
-    checked: false
+    checked: false,
+    star: './images/star-off.svg',
+    starId: false
   },
   {
     name: 'Заметка 3',
@@ -29,7 +33,9 @@ let array = [
     idClass: "color-3",
     id: 3,
     animation: 'note_item',
-    checked: false
+    checked: false,
+    star: './images/star-off.svg',
+    starId: false
   }
 ]
 
@@ -41,7 +47,7 @@ export class body extends React.Component {
   
     this.state = {
       inputData: '',
-      zeroDate: ''
+      zeroDate: '',
     }
 
     this.zeroFunction = this.zeroFunction.bind(this)
@@ -68,13 +74,13 @@ export class body extends React.Component {
         idClass: `color-${array.length + 1}`,
         id: array.length + 1,
         animation: 'note_item note_item_anim',
-        checked: false
+        checked: false,
+        star: './images/star-off.svg',
+        starId: false
       }
       array.unshift(newArray);
     }
     setTimeout(() => {array[0].animation = 'note_item'}, 300)
-
-    // console.log(array);
     
     this.setState({inputData: ''});
   }
@@ -104,32 +110,49 @@ export class body extends React.Component {
           </div>
 
           {/* <NoteItems todos={array}/> */}
+
+          {/* noteitems.scss */}
           <div className='note_items_container'>
             {array.map((array) => {
               return (
                 <div className={array.animation}>
                   <div className='note_box'>
-                      <input 
-                        class="btn_item" 
-                        type="checkbox" 
-                        id={array.idClass} 
-                        name={array.id} 
-                        checked={array.checked}
-                        onClick={() => {
-                          array.checked = !array.checked
-                            if(array.checked == true) {
-                              array.classItem += ' name_item_active'
-                            }
-                            else {
-                              array.classItem = 'name_item'
-                            }
-                          console.log(array)
-                          this.zeroFunction()
-                        }}
-                      />
-                      <label for={array.idClass}></label>
-
+                    <input 
+                      class="btn_item"
+                      type="checkbox"
+                      id={array.idClass}
+                      name={array.id}
+                      checked={array.checked}
+                      onClick={() => {
+                        array.checked = !array.checked
+                          if(array.checked == true) {
+                            array.classItem += ' name_item_active'
+                          }
+                          else {
+                            array.classItem = 'name_item'
+                          }
+                        console.log(array)
+                        this.zeroFunction()
+                      }}
+                    />
+                    <label for={array.idClass}></label>
                     <h2 className={array.classItem}>{array.name}</h2>
+                  </div>
+                  
+                  {/* Отметка важные (звезда) */}
+                  <div className='note_star'
+                    onClick={() => {
+                      array.starId = !array.starId
+                        if(array.starId == true) {
+                          array.star = './images/star-on.svg'
+                        }
+                        else {
+                          array.star = './images/star-off.svg'
+                        }
+                      console.log(array)
+                      this.zeroFunction()
+                    }}>
+                    <img src={array.star} id={array.starId} alt="star" />
                   </div>
                 </div>
               )
