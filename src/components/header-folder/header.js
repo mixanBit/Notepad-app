@@ -3,12 +3,23 @@ import './header.css'
 
 // Google authentication
 import { authentication } from '../../firebase-config';
-import { signOut, GoogleAuthProvider } from "firebase/auth";
+import { signOut } from "firebase/auth";
 
 
 export class header extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      userImg: './images/google.png'
+    }
+
+    this.signOutGoogle = this.signOutGoogle.bind(this)
+  }
+
   async signOutGoogle() {
+    // console.log(authentication.currentUser.photoURL);
+    // this.setState({userImg: authentication.currentUser.photoURL})
     await authentication.signOut()
     .then(() => {
       console.log('успешный выход');
@@ -39,7 +50,7 @@ export class header extends React.Component {
             <img className='settings_icon' src='./images/setting.png' alt="settings" />
 
             <button className='authorization' onClick={this.signOutGoogle}>
-              <img className="settings_entrance" src="./images/google.png" alt="entrance" />
+              <img className="settings_entrance" src={this.state.userImg} alt="entrance" />
               <p className='setting_logout'>Выход</p>
             </button> 
 

@@ -77,12 +77,16 @@
   transition: 0.2s;
   padding: 10px;
 }
-.authorization_login:hover {
-  -webkit-box-shadow: 0 18px 55px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 18px 55px rgba(0, 0, 0, 0.4);
+.authorization_login:hover img {
+  -webkit-box-shadow: 0 18px 55px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 18px 55px rgba(0, 0, 0, 0.6);
 }
 .authorization_login img {
-  width: 40px;
+  border-radius: 50px;
+  width: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 10px;
 }
 .authorization_login p {
   font-size: 18px;

@@ -3,7 +3,7 @@ import './authorization.css'
 
 // Google authentication
 import { authentication } from '../../firebase-config';
-import { signInWithPopup, signOut, GoogleAuthProvider } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 
 export class authorization extends Component {
@@ -17,7 +17,6 @@ export class authorization extends Component {
 
     this.signInWithGoogle = this.signInWithGoogle.bind(this)
   }
-
 
 
   signInWithGoogle() {
