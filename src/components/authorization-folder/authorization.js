@@ -43,25 +43,6 @@ export class authorization extends Component {
     }
   }
 
-  // async signOutGoogle() {
-  //   await authentication.signOut()
-  //   .then(() => {
-  //     console.log('успешный выход');
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //   })
-  // }
-
-  // status() {
-  //   console.log(authentication.currentUser.email);
-  //   if(authentication.currentUser.emailVerified) {
-  //     console.log('почта верная');
-  //   } else {
-  //     console.log('почта неверная');
-  //   }
-  // }
-
   render() {
     return (
       <div className={this.state.authActiv}>
@@ -71,17 +52,6 @@ export class authorization extends Component {
             <img src="./images/google.png" alt="Google" />
             <p>Авторизация</p>
           </button>
-
-          {/* <button className="authorization_login" onClick={this.signOutGoogle}>
-            <img src="./images/google.png" alt="Google" />
-            <p>Выход</p>
-          </button>
-
-          <button className="authorization_login" onClick={this.status}>
-            <img src="./images/google.png" alt="Google" />
-            <p>Показать аккаунт</p>
-          </button> */}
-
         </div>
       </div>
     )

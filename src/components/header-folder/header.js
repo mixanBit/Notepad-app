@@ -1,42 +1,18 @@
 import React from 'react';
 import './header.css'
 
-// Google authentication
-import { authentication } from '../../firebase-config';
-import { signOut } from "firebase/auth";
-
+// header components
+import BtnDarkside from './header-components/btn-darkside'
+import SignOut from './header-components/sign-out'
 
 export class header extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      userImg: './images/google.png'
-    }
-
-    this.signOutGoogle = this.signOutGoogle.bind(this)
-  }
-
-  async signOutGoogle() {
-    // console.log(authentication.currentUser.photoURL);
-    // this.setState({userImg: authentication.currentUser.photoURL})
-    await authentication.signOut()
-    .then(() => {
-      console.log('успешный выход');
-      localStorage.clear()
-      window.location.reload(true)
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-  }
 
   render() {
     return (
       <header className='header'>
         <div className='header_container'>
           <div className='logo'>
-            <img className='btn_darkside' src="./images/btn-dark.png" alt="change" />
+            <BtnDarkside />
             <hr/>
             <h1 className='title_logo'>Notepad</h1>
           </div>
@@ -48,17 +24,7 @@ export class header extends React.Component {
 
           <div className='settings'>
             <img className='settings_icon' src='./images/setting.png' alt="settings" />
-
-            <button className='authorization' onClick={this.signOutGoogle}>
-              <img className="settings_entrance" src={this.state.userImg} alt="entrance" />
-              <p className='setting_logout'>Выход</p>
-            </button> 
-
-            {/* <img className='settings_icon' src='' alt="settings" />
-            <button className='authorization'>
-              <img className="settings_entrance" src="./images/entrance.png" alt="entrance" />
-              <p className='settings_login'>Login</p>
-            </button>  */}
+            <SignOut />
           </div>
         </div>
       </header>

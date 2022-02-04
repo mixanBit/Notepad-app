@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import reportWebVitals from './reportWebVitals';
 import './index.css';
 import './scroll.css';
 import './color.css';
-import reportWebVitals from './reportWebVitals';
 
 // components
 import Authorization from './components/authorization-folder/authorization'
