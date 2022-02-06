@@ -1,6 +1,7 @@
 .header{
   width: 100%;
   background: var(--headerBg);
+  transition: 1s;
 }
 
 .header_container{
@@ -46,7 +47,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-color: var(--headerColor);
+  background-color: var(--headerBtnshBg);
     @media screen and (max-width: 768px) {
       width: auto;
       min-width: 1px;
@@ -90,7 +91,7 @@
   align-items: center;
   grid-gap: 10px;
   color: var(--headerSettingsLoginColor);
-  background-color: var(--headerColor);
+  background-color: var(--headerBtnshBg);
   padding-left: 21px;
   padding-right: 21px;
   transition: .25s;
@@ -98,8 +99,8 @@
       display: none;
     }
     &:hover{
-      color: rgba(255,255,255,.9);
-      background-color: #42275A;
+      color: var(--headerLogoutHoverColor);
+      background-color: rgba(0,0,0,0);
     }
     .setting_logout{
       font-size: 14px;

@@ -22,17 +22,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--nameItemColor);
   background-color: var(--createNotesDopColor);
   padding-left: 26px;
   padding-right: 26px;
-  transition: .25s;
+  transition: .3s;
     @media screen and (max-width: 768px) {
       min-height: 70px;
       padding-left: 15px;
       padding-right: 15px;
     }
     &:hover{
-      background-color: rgba(115,75,109,.8);
+      background-color: var(--noteitemHoverBg);
         @media (hover: none) and (pointer: coarse) {
           background-color: var(--createNotesDopColor);
         }
@@ -148,7 +149,6 @@
 .name_item{
   width: calc(100vw - 230px);
   word-wrap: break-word;
-  color: var(--nameItemColor);
   font-size: 18px;
   font-weight: normal;
   transition: .3s;

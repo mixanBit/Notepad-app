@@ -14,7 +14,7 @@ let array = [
     id: 1,
     animation: 'note_item',
     checked: false,
-    star: './images/star-off.svg',
+    star: './images/star-off.png',
     starId: false
   },
   {
@@ -24,7 +24,7 @@ let array = [
     id: 2,
     animation: 'note_item',
     checked: false,
-    star: './images/star-off.svg',
+    star: './images/star-off.png',
     starId: false
   },
   {
@@ -34,7 +34,7 @@ let array = [
     id: 3,
     animation: 'note_item',
     checked: false,
-    star: './images/star-off.svg',
+    star: './images/star-off.png',
     starId: false
   }
 ]
@@ -75,7 +75,7 @@ export class body extends React.Component {
         id: array.length + 1,
         animation: 'note_item note_item_anim',
         checked: false,
-        star: './images/star-off.svg',
+        star: './images/star-off.png',
         starId: false
       }
       array.unshift(newArray);
@@ -144,10 +144,10 @@ export class body extends React.Component {
                     onClick={() => {
                       array.starId = !array.starId
                         if(array.starId == true) {
-                          array.star = './images/star-on.svg'
+                          array.star = './images/star-on.png'
                         }
                         else {
-                          array.star = './images/star-off.svg'
+                          array.star = './images/star-off.png'
                         }
                       console.log(array)
                       this.zeroFunction()

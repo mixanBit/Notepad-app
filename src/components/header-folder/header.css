@@ -1,6 +1,8 @@
 .header {
   width: 100%;
   background: var(--headerBg);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .header_container {
@@ -57,7 +59,7 @@
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  background-color: var(--headerColor);
+  background-color: var(--headerBtnshBg);
 }
 @media screen and (max-width: 768px) {
   .search {
@@ -113,7 +115,7 @@
           align-items: center;
   grid-gap: 10px;
   color: var(--headerSettingsLoginColor);
-  background-color: var(--headerColor);
+  background-color: var(--headerBtnshBg);
   padding-left: 21px;
   padding-right: 21px;
   -webkit-transition: 0.25s;
@@ -125,8 +127,8 @@
   }
 }
 .authorization:hover {
-  color: rgba(255, 255, 255, 0.9);
-  background-color: #42275A;
+  color: var(--headerLogoutHoverColor);
+  background-color: rgba(0, 0, 0, 0);
 }
 .authorization .setting_logout {
   font-size: 14px;

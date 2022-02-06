@@ -7,7 +7,7 @@
   left: 0;
   visibility: visible;
   opacity: 1;
-  background-color: rgba(0,0,0,.7);
+  background-color: var(--authorizationWindowBg);
   transition: .7s;
 }
 
@@ -47,11 +47,11 @@
   align-items: center;
   grid-gap: 15px;
   color: var(--authorizationLoginColor);
-  background-color: rgba(0,0,0,0);
+  background-color: var(--authorizationBtnBg);
   transition: .2s;
   padding: 10px;
     &:hover img{
-      box-shadow: 0 18px 55px rgb(0 0 0 / 60%);
+      box-shadow: var(--authorizationBtnShadow);
     }
     img{
       border-radius: 50px;

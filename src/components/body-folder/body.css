@@ -86,6 +86,8 @@
           align-items: center;
   grid-gap: 20px;
   background-color: var(--createNotesBg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   padding-right: 27px;
   margin-top: 57px;
 }
@@ -129,14 +131,14 @@
   }
 }
 .btn_create_box:active {
-  background-color: var(--createNotesDopColor);
+  background-color: var(--createNotesActiveDopColor);
 }
 
 .text_create {
   border-bottom: 3px solid var(--createNotesDopColor);
   width: 316px;
   height: 43px;
-  color: var(--notesHeadingColor);
+  color: var(--notesInputColor);
   font-size: 18px;
   padding-left: 11px;
   padding-right: 11px;

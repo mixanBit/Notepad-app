@@ -1,20 +1,33 @@
 :root{
   /* authorization.scss */
-  --authorizationLoginColor: #3D4043;
   --authorizationBg: white;
-
+  --authorizationWindowBg: rgba(0,0,0,.7);
+  --authorizationLoginColor: #3D4043;
+  --authorizationBtnBg: rgba(0,0,0,0);
+  --authorizationBtnShadow: 0 18px 55px rgb(0 0 0 / 60%); 
+  
   /* header.scss */
   --heightHeaderContainer: 70px;
   --headerBg: linear-gradient(45deg, #42275A, #734B6D);
   --headerColor: white;
+  --headerBtnshBg: white;
   --headerSettingsLoginColor: #3D4043;
+  --headerLogoutHoverColor:  rgba(255,255,255,.9);
 
   /* body.scss */
+  --bodyBg: white;
+  --notesInputColor: #3D4043;
   --notesHeadingColor: #3D4043;
   --createNotesBg: #42275A;
   --createNotesDopColor: #734B6D;
+  --createNotesActiveDopColor: #734B6D;
 
   /* noteitems.scss */
   --btnItemBg: white;
   --nameItemColor: white;
+  --noteitemHoverBg: rgba(115,75,109,.8);
+
+  /* scroll.css */
+  --scrollBg1: #734B6D;
+  --scrollBg2: #42275A;
 }

@@ -21,7 +21,8 @@ export class signOutGoogle extends React.Component {
     await authentication.signOut()
     .then(() => {
       console.log('успешный выход');
-      localStorage.clear()
+      // localStorage.clear()
+      localStorage.removeItem('onlineAuth');
       window.location.reload(true)
     })
     .catch((err) => {
