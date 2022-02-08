@@ -16,26 +16,6 @@ let array = [
     checked: false,
     star: './images/star-off.png',
     starId: false
-  },
-  {
-    name: 'Заметка 2',
-    classItem: 'name_item',
-    idClass: "color-2",
-    id: 2,
-    animation: 'note_item',
-    checked: false,
-    star: './images/star-off.png',
-    starId: false
-  },
-  {
-    name: 'Заметка 3',
-    classItem: 'name_item',
-    idClass: "color-3",
-    id: 3,
-    animation: 'note_item',
-    checked: false,
-    star: './images/star-off.png',
-    starId: false
   }
 ]
 
